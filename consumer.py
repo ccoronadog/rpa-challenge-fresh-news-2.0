@@ -199,7 +199,7 @@ def process_new(news_results, i, search_phrase, excel_file):
     page.wait_for_load_state(state="load")
 
     new_title = news_results.nth(i).locator("h3.promo-title").text_content()
-    screenshotName = "output/" + re.sub(regex_pattern, "", new_title) + ".png"
+    screenshotName = "output/screenshots/" + re.sub(regex_pattern, "", new_title) + ".png"
     new_description = news_results.nth(i).locator("p.promo-description").text_content()
     new_date = news_results.nth(i).locator("p.promo-timestamp").text_content()
     img_url = news_results.nth(i).locator("div.promo-media > a > picture > img").get_attribute("src")
