@@ -1,0 +1,14 @@
+{
+    "value":[
+        {
+            "SearchPhrase": "NBA",
+            "NewsCategory": "Sports",
+            "NumberMonths": 1
+        },
+        {
+            "SearchPhrase": "Marvel",
+            "NewsCategory": "Movies",
+            "NumberMonths": 2
+        }
+    ]
+}

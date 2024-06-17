@@ -7,7 +7,7 @@ from RPA.Tables import Tables
 json = JSON()
 table = Tables()
 
-PARAMETERS_JSON_FILE = "output/news_parameters.json"
+PARAMETERS_JSON_FILE = "input/news_parameters.json"
 
 SEARCH_PHRASE = "SearchPhrase"
 NEWS_CATEGORY = "NewsCategory"
