@@ -1,4 +1,5 @@
 from datetime import datetime
+from dateutil import parser
 import dateutil.relativedelta
 from robocorp import browser, workitems
 from RPA.Excel.Files import Files
@@ -126,8 +127,12 @@ class ProcessNews:
         return is_break
 
     def convert_date(self, str_new_date):
-        date = datetime.strptime(str_new_date, "%B %d, %Y")
-        return date.strftime("%m/%Y")
+        try:
+            date_obj = parser.parse(str_new_date)
+            return date_obj.strftime("%m/%Y")
+        except ValueError:
+        # Handle the case where the date string does not match any known format
+            return None
 
     def create_excel_file(self):
         excel_file = "output/Fresh News.xlsx"
